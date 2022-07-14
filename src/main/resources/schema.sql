@@ -1,0 +1,4 @@
+CREATE TABLE CATEGORY (id BIGINT AUTO_INCREMENT  PRIMARY KEY, name_category VARCHAR(255));
+
+CREATE TABLE PRODUCT (id BIGINT AUTO_INCREMENT  PRIMARY KEY, name VARCHAR(255), price DOUBLE, description
+    VARCHAR(255), category_id BIGINT, foreign key (category_id) references CATEGORY(id));
