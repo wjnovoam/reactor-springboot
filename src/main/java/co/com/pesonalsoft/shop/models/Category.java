@@ -6,6 +6,10 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 /**
  * @author William Johan Novoa Melendrez
  * @date 13/07/2022
@@ -18,6 +22,8 @@ import org.springframework.data.annotation.Id;
 public class Category {
 
     @Id
+    @Column(name = "category_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nameCategory;
 

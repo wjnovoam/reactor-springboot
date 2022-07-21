@@ -7,19 +7,18 @@ import co.com.pesonalsoft.shop.repository.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import java.time.Duration;
 import java.util.Arrays;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class ShopAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ShopAppApplication.class, args);
 	}
-
 
 	@Bean
 	public CommandLineRunner demoCategory(CategoryRepository repository) {
@@ -30,6 +29,15 @@ public class ShopAppApplication {
 				))
 				.blockLast(Duration.ofSeconds(10));
 	}
+
+	/*@Bean
+	public CommandLineRunner demoUser(UserRepository userRepository) {
+		return args-> userRepository.saveAll(Arrays.asList(
+						new User("william", "cBrlgyL2GI2GINuLUUwgojITuIufFycpLG4490dhGtY=", true),
+						new User("mauricio", "cBrlgyL2GI2GINuLUUwgojITuIufFycpLG4490dhGtY=", true)
+				))
+				.blockLast(Duration.ofSeconds(10));
+	}*/
 
 	@Bean
 	public CommandLineRunner demo(ProductRepository repository) {

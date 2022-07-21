@@ -3,6 +3,9 @@ package co.com.pesonalsoft.shop.models;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 /**
  * @author William Johan Novoa Melendrez
  * @date 12/07/2022
@@ -15,6 +18,7 @@ import org.springframework.data.annotation.Id;
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private double price;

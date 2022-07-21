@@ -2,20 +2,16 @@ package co.com.pesonalsoft.shop.service;
 
 import co.com.pesonalsoft.shop.dto.ProductDto;
 import co.com.pesonalsoft.shop.exceptions.NotFountException;
-import co.com.pesonalsoft.shop.models.Category;
 import co.com.pesonalsoft.shop.models.Product;
 import co.com.pesonalsoft.shop.repository.CategoryRepository;
 import co.com.pesonalsoft.shop.repository.ProductRepository;
 import co.com.pesonalsoft.shop.utils.ConverterDtoToEntity;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.time.Duration;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
