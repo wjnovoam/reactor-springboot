@@ -10,6 +10,7 @@ import org.springframework.web.reactive.config.WebFluxConfigurer;
  * @date 18/07/2022
  */
 @Configuration
+@EnableWebFlux
 public class CORSFilter implements WebFluxConfigurer {
 
     @Override

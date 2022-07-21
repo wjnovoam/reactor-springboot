@@ -1,7 +1,6 @@
 package co.com.pesonalsoft.shop.controllers;
 
 import co.com.pesonalsoft.shop.models.Category;
-import co.com.pesonalsoft.shop.models.Product;
 import co.com.pesonalsoft.shop.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
